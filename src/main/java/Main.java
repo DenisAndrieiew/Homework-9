@@ -2,21 +2,16 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        final String FILE_PATH1 = "D:\\Users\\Eretar\\IdeaProjects\\Homework-9\\src\\main\\java\\Testing\\file.txt";
-        final String FILE_PATH2 = "D:\\Users\\Eretar\\IdeaProjects\\Homework-9\\src\\main\\java\\Testing\\file2.txt";
-        final String PATH_TO_JSON = "D:\\Users\\Eretar\\IdeaProjects\\Homework-9\\src\\main\\java\\Testing\\user.json";
-        final String FILE_PATH3 = "D:\\Users\\Eretar\\IdeaProjects\\Homework-9\\src\\main\\java\\Testing\\words.txt";
+        final String FILE_PATH1 = "src\\main\\resources\\file.txt";
+        final String FILE_PATH2 = "src\\main\\resources\\file2.txt";
+        final String PATH_TO_JSON = "src\\main\\resources\\user.json";
+        final String FILE_PATH3 = "src\\main\\resources\\words.txt";
         {
-            System.out.println("***************\ntesting validator, type 1 (through FileInputStream" +
+            System.out.println("***************\ntesting validator" +
                     "& scanner):");
 
-            Exercise1.Validator1(FILE_PATH1);
-            System.out.println("finishing testing validator type 1\n***************");
-        }
-        {
-            System.out.println("testing validator type2 (through FileReader & own parsing method):");
-            Exercise1.Validator2(FILE_PATH1);
-            System.out.println("finishing testing validator type 2\n***************");
+            Exercise1.validator(FILE_PATH1);
+            System.out.println("finishing testing validator\n***************");
         }
         {
             System.out.println("testing exercise 2");
