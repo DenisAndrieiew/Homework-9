@@ -55,16 +55,18 @@ public class Exercise3 {
         String max = "";
         int maxNum = 0;
         for (int i = 0; i < words.length - 1; i++) {
+            max = words[i];
             for (int j = i + 1; j < words.length; j++) {
-                max = words[i];
                 if (max.charAt(max.length() - 1) < words[j].charAt(words[j].length() - 1)) {
                     max = words[j];
                     maxNum = j;
                 }
             }
-            buffer = words[i];
-            words[i] = max;
-            words[maxNum] = buffer;
+            if(max.charAt(max.length()-1)>words[i].charAt(words[i].length()-1)) {
+                buffer = words[i];
+                words[i] = max;
+                words[maxNum] = buffer;
+            }
         }
     }
 }
